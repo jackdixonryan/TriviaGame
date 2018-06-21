@@ -1,0 +1,22 @@
+.jumbotron  {
+    text-align: center;
+}
+
+.row {
+    height: 200px;
+}
+
+form {
+    text-align: center;
+    width: 100%;
+    padding-bottom: 100px;
+    margin-bottom: 1px 
+}
+
+.container {
+    text-align: center;
+}
+
+input {
+    margin: 20px;
+}
