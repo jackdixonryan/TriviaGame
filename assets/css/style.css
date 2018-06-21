@@ -8,15 +8,18 @@
 
 form {
     text-align: center;
-    width: 100%;
-    padding-bottom: 100px;
-    margin-bottom: 1px 
+    padding-bottom: 40px;
+    padding-top: 40px;
+    border-bottom: 1px lightgrey solid;
 }
+
 
 .container {
     text-align: center;
 }
 
-input {
-    margin: 20px;
+label {
+    margin: 10px;
 }
+
+

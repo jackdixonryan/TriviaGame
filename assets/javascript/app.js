@@ -6,14 +6,14 @@ $(document).ready(function() {
     var wrongAnswers = 0;
 
     var timeLeft = true;
-    var time = 10;
+    var time = 60;
 
     //Objects, key/value pairs w/key = question and value = answer options..
     var questions = {
         q1: {
-            question: "Which planet from the sun is Jupiter?",
-            answers: ["5", "6", "4", "3"],
-            solution: "5"
+            question: "Which of these is a particle?",
+            answers: ["Magnets", "Electron", "Carbon", "Atom"],
+            solution: "Electron"
         },
         q2: {
             question: "What is the smallest of these particles?",
@@ -29,7 +29,16 @@ $(document).ready(function() {
             question: "What does Heisenberg's Uncertainty Principle propose cannot ever be observed?",
             answers: ["The Higgs-Boson", "Gravitons", "The exact position of an electron", "Fermion Orbital States"],
             solution: "The exact position of an electron"
-        }
+        },
+        q5: {
+            question: "Which of these is not a flavour quality of quarks?",
+            answers: ["Strangeness", "Charm", "Topness", "Bounce"],
+            solution: "Bounce"
+        },
+        q6: {
+            question: "The study of the weak interaction in particle physics is called Quantum:", 
+            answers: ["Flavourdynamics", "Chromodynamics", "Electrodynamics"]
+        },
     }
 
     function timer() {
@@ -66,9 +75,7 @@ $(document).ready(function() {
 
 
             //creating elements
-            console.log(item);
-            console.log(item.answers);
-            console.log(item.answers.length);
+ 
             //for each answer
             for (var i = 0; i < item.answers.length; i++) {
 
@@ -99,11 +106,16 @@ $(document).ready(function() {
 
     $(".btn-primary").click(function() {
         //Running the timer and number generator
-        
+        Object.keys(questions).forEach(key => {
+            console.log(key);
+        });
+
         questionGenerator(questions.q1);
         questionGenerator(questions.q2);
         questionGenerator(questions.q3);
         questionGenerator(questions.q4);
+        questionGenerator(questions.q5);
+        questionGenerator(questions.q6);
 
         timer();
 
